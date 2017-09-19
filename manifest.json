@@ -3,7 +3,7 @@
   "description": "Adds a button to the address bar that closes the current tab.",
   "manifest_version": 2,
   "name": "Tab Close Button",
-  "version": "1.2",
+  "version": "1.3",
   "homepage_url": "https://github.com/moben/tab-close-webext",
   "icons": {
     "96": "icons/ic_menu_stop.png"
@@ -17,10 +17,6 @@
     "default_icon": "icons/ic_menu_stop.png",
     "default_title": "Close this tab",
     "browser_style": true
-  },
-  
-  "permissions": [
-    "activeTab"
-  ]
+  }
 
 }

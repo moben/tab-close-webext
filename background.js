@@ -5,16 +5,22 @@ function closeTab(tab) {
 
 browser.pageAction.onClicked.addListener(closeTab);
 
-//  Each time a tab is updated, reset the page action for that tab.
-browser.tabs.onUpdated.addListener((id, changeInfo, tab) => {
-    browser.pageAction.show(id);
+//  When first loaded, initialize the page action for all tabs.
+var gettingAllTabs = browser.tabs.query({});
+gettingAllTabs.then((tabs) => {
+    for (let tab of tabs) {
+        browser.pageAction.show(tab.id);
+    }
 });
-//  Avoid the need for the "all tabs" permission by adding the button on demand
-browser.tabs.onActivated.addListener((activeInfo) => {
-    browser.pageAction.show(activeInfo.tabId);
-});
+
+//  Add pageAction to each new tab
 browser.tabs.onCreated.addListener((tab) => {
     browser.pageAction.show(tab.id);
+});
+//  Not sure if there can be a race, e.g. on startup with opening a new tab before the onCreated
+//  listener is set up. Add this one just in case
+browser.tabs.onActivated.addListener((activeInfo) => {
+    browser.pageAction.show(activeInfo.tabId);
 });
 //  probably never fires? (according to the docs)
 //  add it just in case

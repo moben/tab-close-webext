@@ -11,19 +11,19 @@ Because closing tabs on mobile is a chore otherwise
 ### Firefox 55 for Android
 
 <p align="center">
-  <img src="screenshot_mobile_ff55.png" width="70%"/>
+  <img src="screenshots/screenshot_mobile_ff55.png" width="70%"/>
 </p>
 
 ### Firefox 57 for Android
 
 <p align="center">
-  <img src="screenshot_mobile.png" width="70%"/>
+  <img src="screenshots/screenshot_mobile.png" width="70%"/>
 </p>
 
 ### Firefox 57 on Desktop
 
 <p align="center">
-  <img src="screenshot_desktop.png" width="70%"/>
+  <img src="screenshots/screenshot_desktop.png" width="70%"/>
 </p>
 
 # Known Bugs:

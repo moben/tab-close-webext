@@ -22,6 +22,10 @@ browser.tabs.onCreated.addListener((tab) => {
 browser.tabs.onActivated.addListener((activeInfo) => {
     browser.pageAction.show(activeInfo.tabId);
 });
+//  Needed to show the button when a discarded tab is re-loaded
+browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
+    browser.pageAction.show(tabId);
+});
 //  probably never fires? (according to the docs)
 //  add it just in case
 browser.tabs.onReplaced.addListener((addedTabId, removedTabId) => {

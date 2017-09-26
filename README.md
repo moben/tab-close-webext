@@ -1,10 +1,8 @@
 # What This Does
 
-Add a button to the address bar that closes the current tab when clicked.
+Add a button to the address bar that closes the current tab when clicked. Because closing tabs on mobile is a chore otherwise.
 
-# Why?
-
-Because closing tabs on mobile is a chore otherwise
+Get it from [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/tab-close-webext/)
 
 # Screenshots
 
